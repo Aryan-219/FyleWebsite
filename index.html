@@ -1,71 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-  </head>
-  <body class="bg-dark">
-    <!-- <h1 class="animate__animated animate__slideInDown text-secondary-emphasis">
+    <title>Fyle | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        .form-control:hover,
+        .form-control:focus {
+            box-shadow: none;
+            border-color: initial;
+        }
+
+        /* .form-floating>.form-control:focus~label,
+        .form-floating>.form-control:not(:placeholder-shown)~label {
+            background-color: gray;
+            color: white;
+            offset: red;
+        } */
+
+        .form-floating>label {
+            background-color: none;
+            /* Change this to your desired background color */
+            /* padding: 0 0.25rem; */
+        }
+
+        .form-check-input:checked {
+            background-color: #f75a5f;
+            /* Change this to your desired color */
+            border-color: #f75a5f;
+            /* Change this to match the background color */
+            box-shadow: none;
+            border-color: initial;
+        }
+
+        .form-check-input {
+            border-color: #f75a5f;
+            /* Optional: change the border color when unchecked */
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+
+    <!-- Modal for the contact us form -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Talk to us</h1>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body">
+                    <form action="https://getform.io/f/lbjklkja" method="POST">
+                        <div class="form-floating mb-3 ">
+                            <input type="email" class="form-control bg-dark border-0 border-bottom rounded-0 text-white"
+                                id="floatingInput1" placeholder="name@example.com" name="email">
+                            <label for="floatingInput1" class="text-secondary" data-default="Work email*"
+                                data-focus="Work email">Work email*</label>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col form-floating mb-3">
+                                <input type="text"
+                                    class="form-control bg-dark border-0 border-bottom rounded-0 text-white"
+                                    id="floatingInput2" placeholder="blablab" name="first-name">
+                                <label for="floatingInput2" class="text-secondary" data-default="First name*"
+                                    data-focus="First name">First name*</label>
+                            </div>
+                            <div class="col form-floating mb-3">
+                                <input type="text"
+                                    class="form-control bg-dark border-0 border-bottom rounded-0 text-white"
+                                    id="floatingInput3" placeholder="retet" name="last-name">
+                                <label for="floatingInput3" class="text-secondary" data-default="Last name*"
+                                    data-focus="Last name">Last name*</label>
+                            </div>
+                        </div>
+
+                        <div class="form-check mt-3">
+                            <input class="form-check-input" type="checkbox" value="consent" name="con" id="flexCheckDefault">
+                            <label class="form-check-label text-light" for="flexCheckDefault">
+                                I agree to Fyle's terms and conditions, and provide consent to send me communication.
+                            </label>
+                        </div>
+
+                        <div class="d-grid gap-2 px-5 py-3 mt-3">
+                            <button type="submit" class="btn btn-danger px-4 py-2">Contact Us</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- <h1 class="animate_animated animate_slideInDown text-secondary-emphasis">
       An animated element
     </h1> -->
-    <div
-      class="d-flex flex-row border border-2 rounded-3 m-5 p-5 column-gap-3"
-      style="height: 500px"
-    >
-      <div
-        class="w-50 p-5 text-light d-flex flex-column justify-content-center row-gap-2"
-      >
-        <p class="text-danger fs-5">AWARD WINNING</p>
-        <h1>DIGITAL MARKETING AGENCY</h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, culpa
-          molestias quod, dignissimos vero repellat nulla aspernatur temporibus
-          molestiae ea, illo aut. Expedita, laborum facere officia atque cumque
-          voluptates nobis? Nam velit magni quaerat saepe laborum reiciendis a
-          quisquam nemo dolorem veritatis modi assumenda, molestias facere
-          consequuntur itaque beatae nostrum voluptates inventore earum. In
-          labore iste quidem consequatur sed architecto!
-        </p>
-        <div class="d-md-block">
-            <button class="btn btn-danger" type="button">Contact Us</button>
-            
-          </div>
-        
-      </div>
-      <div class="w-50 d-flex justify-content-center">
-        <img class="h-100 w-75" src="static/media/images/card1.png" alt="" />
-      </div>
+    <div class="d-flex flex-row border border-2 rounded-3 m-5 p-5 column-gap-3" style="height: 500px">
+        <div class="w-50 p-5 text-light d-flex flex-column justify-content-center row-gap-2">
+            <p class="text-danger fs-5">AWARD WINNING</p>
+            <h1>DIGITAL MARKETING AGENCY</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, culpa
+                molestias quod, dignissimos vero repellat nulla aspernatur temporibus
+                molestiae ea, illo aut. Expedita, laborum facere officia atque cumque
+                voluptates nobis? Nam velit magni quaerat saepe laborum reiciendis a
+                quisquam nemo dolorem veritatis modi assumenda, molestias facere
+                consequuntur itaque beatae nostrum voluptates inventore earum. In
+                labore iste quidem consequatur sed architecto!
+            </p>
+            <div class="d-md-block">
+                <button class="btn btn-danger px-4 py-2" type="button" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Contact Us</button>
+
+            </div>
+
+        </div>
+        <div class="w-50 d-flex justify-content-center">
+            <img class="h-100 w-75 rounded-3" src="static/media/images/card1.png" alt="" />
+        </div>
     </div>
-    <!-- <div class="d-flex" style="width: 18rem">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-      <img
-        src="static/media/images/card1.png"
-        class="card-img-top"
-        alt="1st card image"
-      />
-    </div> -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>  
+        $(document).ready(function () {
+            $('.form-control').on('focus', function () {
+                var label = $(this).siblings('label');
+                label.text(label.data('focus'));
+            }).on('blur', function () {
+                var label = $(this).siblings('label');
+                label.text(label.data('default'));
+            });
+        });
+    </script>
+</body>
+
 </html>
